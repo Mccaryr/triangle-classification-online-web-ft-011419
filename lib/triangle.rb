@@ -7,7 +7,7 @@ class Triangle
   end
 
   def kind
-    if first < 0 || second < 0 || third < 0
+    if @first < 0 || @second < 0 || @third < 0
       raise TriangleError
     elsif @first + @second <= @third || @first + @third <= @second || @second + @third <= @first
       raise TriangleError
