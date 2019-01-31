@@ -9,12 +9,12 @@ class Triangle
   def kind
     if first < 0 || second < 0 || third < 0
       raise TriangleError
-    elsif first + second <= third || first + third <= second || second + third <= first
+    elsif @first + @second <= @third || @first + @third <= @second || @second + @third <= @first
       raise TriangleError
     else
-      if first == second && second == third
+      if @first == @second && @second == @third
         :equilateral
-      elsif  first == second || second == third || first == third
+      elsif  @first == @second || @second == @third || @first == @third
         :isoceles
       else
         :scalene
