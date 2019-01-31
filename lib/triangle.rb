@@ -8,23 +8,23 @@ class Triangle
 
   def kind
     if first < 0 || second < 0 || third < 0
-      raise TriangleError 
-    elsif first + second <= third || first + third <= second || second + third <= first 
-      raise TriangleError 
-    else 
-      if first == second && second == third 
-        :equilateral 
-      elsif  first == second || second == third || first == third 
-        :isoceles 
-      else 
-        :scalene 
-      end 
-    end 
-  end 
-    
+      raise TriangleError
+    elsif first + second <= third || first + third <= second || second + third <= first
+      raise TriangleError
+    else
+      if first == second && second == third
+        :equilateral
+      elsif  first == second || second == third || first == third
+        :isoceles
+      else
+        :scalene
+      end
+    end
+  end
+
   end
 
   class TriangleError < StandardError
-  
+
 end
 end 
