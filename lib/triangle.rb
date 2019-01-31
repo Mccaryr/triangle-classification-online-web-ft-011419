@@ -1,5 +1,4 @@
 class Triangle
-  attr_accessor :first, :second, :third
 
   def initialize(first, second, third)
     @first=first
@@ -8,11 +7,24 @@ class Triangle
   end
 
   def kind
-    returns type
+    if first < 0 || second < 0 || third < 0
+      raise TriangleError 
+    elsif first + second <= third || first + third <= second || second + third <= first 
+      raise TriangleError 
+    else 
+      if first == second && second == third 
+        :equilateral 
+      elsif  first == second || second == third || first == third 
+        :isoceles 
+      else 
+        :scalene 
+      end 
+    end 
+  end 
+    
   end
 
   class TriangleError < StandardError
-    def message
-    end
-  end
+  
 end
+end 
