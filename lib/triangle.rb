@@ -1,5 +1,6 @@
 class Triangle
   attr_accessor :first, :second, :third
+  
   def initialize(first, second, third)
     @first=first
     @second=second
@@ -13,4 +14,5 @@ class Triangle
   class TriangleError < StandardError
     def message
     end
+  end 
 end
